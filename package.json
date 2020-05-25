@@ -1,0 +1,33 @@
+{
+  "name": "nodejs-typescript-starter",
+  "version": "0.1.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --no-notify src/",
+    "build": "tsc",
+    "start": "npm run build && node dist/",
+    "start:docker": "docker run --rm -it -p 3030:3030 --env-file ./docker.env my-app",
+    "build:docker": "docker build -t my-app .",
+    "eslint": "eslint ."
+  },
+  "keywords": ["nodejs", "typescript", "starter"],
+  "author": "deskoh",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/config": "0.0.36",
+    "@types/express": "^4.17.6",
+    "@types/helmet": "0.0.47",
+    "@typescript-eslint/eslint-plugin": "^3.0.1",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb-typescript": "^7.2.1",
+    "eslint-plugin-import": "^2.20.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.9.3"
+  }
+}
