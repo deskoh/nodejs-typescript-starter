@@ -49,3 +49,14 @@ npm run start:docker
 docker run --rm -it -p 3030:3030 --env-file ./docker.env my-app
 ```
 
+## TODO
+
+* Logging
+
+* Testing
+
+* Coverage
+
+* Pre-commit hooks
+
+* Using TypeScript module-alias
