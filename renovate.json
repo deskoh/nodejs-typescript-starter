@@ -1,13 +1,9 @@
 {
   "extends": [
     "config:base",
-    ":preserveSemverRanges"
+    ":preserveSemverRanges",
+    ":automergeMinor"
   ],
   "timezone": "Asia/Singapore",
-  "schedule": ["every weekend"],
-  "packageRules": [{
-    "updateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
-    }
-  ]
+  "schedule": ["every weekend"]
 }
