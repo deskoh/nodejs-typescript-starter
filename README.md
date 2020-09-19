@@ -51,8 +51,6 @@ docker run --rm -it -p 3030:3030 --env-file ./docker.env my-app
 
 ## TODO
 
-* Logging
-
 * Testing
 
 * Coverage
