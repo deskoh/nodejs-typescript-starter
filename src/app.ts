@@ -4,7 +4,7 @@ import { Server } from 'http'
 import logger from 'loglevel'
 import morgan from 'morgan'
 
-import errorMiddleware from './middleware/error'
+import errorMiddleware from '@/middleware/error'
 
 const startServer = (port: string | number): Promise<Server> => {
   const app = express();

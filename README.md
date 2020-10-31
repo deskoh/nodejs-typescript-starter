@@ -49,6 +49,26 @@ npm run start:docker
 docker run --rm -it -p 3030:3030 --env-file ./docker.env my-app
 ```
 
+## Path Mapping / Module Alias
+
+Module aliasing can simplify module imports using absolute paths using TypeScript [Path Mapping](https://www.typescriptlang.org/docs/handbook/module-resolution.html#path-mapping). However, the module resolution will fail during runtime as NodeJS module resolution does not support it. The npm package [`module alias`](https://github.com/ilearnio/module-alias) is used to fix this. The `package.json` needs to be configured similarly to `tsconfig.json`. See [usage](https://www.npmjs.com/package/module-alias#usage) for more details.
+
+```jsonc
+// tsconfig.json
+"outDir": "./build",
+"baseUrl": "./src",
+"paths": {
+    "@/*": ["*"],
+    "@services/*": ["services/*"]
+}
+
+// package.json
+"_moduleAliases": {
+  "@": "build",
+  "@services": "build/services"
+}
+```
+
 ## TODO
 
 * Testing
@@ -56,5 +76,3 @@ docker run --rm -it -p 3030:3030 --env-file ./docker.env my-app
 * Coverage
 
 * Pre-commit hooks
-
-* Using TypeScript module-alias
