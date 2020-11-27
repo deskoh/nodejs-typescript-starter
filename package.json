@@ -19,7 +19,7 @@
   "author": "deskoh",
   "license": "ISC",
   "dependencies": {
-    "config": "^3.3.2",
+    "config": "^3.3.3",
     "express": "^4.17.1",
     "helmet": "^4.2.0",
     "loglevel": "^1.7.0",
