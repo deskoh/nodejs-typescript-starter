@@ -1,17 +1,9 @@
 {
   "extends": [
-    "config:base"
+    "config:semverAllMonthly"
   ],
   "automerge": true,
-  "packageRules": [
-    {
-      "updateTypes": ["major", "minor", "patch", "pin", "digest"],
-      "automerge": true
-    }
-  ],
   "rangeStrategy": "bump",
   "requiredStatusChecks": null,
-  "schedule": ["every weekend"],
-  "separateMajorMinor": false,
   "timezone": "Asia/Singapore"
 }
