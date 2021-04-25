@@ -76,5 +76,3 @@ Module aliasing can simplify module imports using absolute paths using TypeScrip
 * Testing
 
 * Coverage
-
-* Pre-commit hooks
