@@ -1,5 +1,5 @@
 ARG DOCKER_REGISTRY
-FROM ${DOCKER_REGISTRY}node:12-alpine AS BUILD_IMAGE
+FROM ${DOCKER_REGISTRY}node:14-alpine AS BUILD_IMAGE
 
 WORKDIR /app
 
@@ -20,7 +20,7 @@ RUN npm run build && \
     npm prune --production
 
 ARG DOCKER_REGISTRY
-FROM ${DOCKER_REGISTRY}node:12-alpine
+FROM ${DOCKER_REGISTRY}node:14-alpine
 
 WORKDIR /app
 
