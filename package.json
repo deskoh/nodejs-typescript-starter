@@ -24,7 +24,7 @@
     "*.{js,ts}": "eslint --fix"
   },
   "dependencies": {
-    "config": "^4.0.0",
+    "config": "^5.0.0",
     "express": "^5.0.0",
     "helmet": "^8.0.0",
     "loglevel": "^1.8.0",
